@@ -33,14 +33,14 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 10px;
     padding: 20px;
 }
 
 .gallery img {
-    width: 100%;
-    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
 }
 
 .letter {
@@ -60,3 +60,4 @@ body {
 .gift:hover {
     transform: scale(1.2);
 }
+
