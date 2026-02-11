@@ -4,6 +4,25 @@
     <title>Raise a Complaint 😤</title>
     <link rel="stylesheet" href="style.css">
 </head>
+    <div class="hearts"></div>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
+    document.querySelector(".hearts").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
 <body>
 
 <h1>Tell Me What's Wrong 😔</h1>
@@ -16,3 +35,4 @@
 
 </body>
 </html>
+
